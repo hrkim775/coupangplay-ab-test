@@ -213,13 +213,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateWatchButtonPassType() {
-    const oneDoubleButton = document.querySelector("#watchButton_one, #watchButton_double");
+    const oneDoubleButton = document.querySelector("#watchButton_a_one, #watchButton_a_double");
     if (oneDoubleButton) {
-      oneDoubleButton.id = mode === "one" ? "watchButton_one" : "watchButton_double";
+      oneDoubleButton.id = mode === "one" ? "watchButton_a_one" : "watchButton_a_double";
       oneDoubleButton.setAttribute("data-pass-type", mode === "one" ? "one" : "double");
     }
 
-    const allButton = document.querySelector("#watchButton_all");
+    const allButton = document.querySelector("#watchButton_a_all");
     if (allButton) {
       allButton.setAttribute("data-pass-type", "all");
     }

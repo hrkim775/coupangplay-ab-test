@@ -212,6 +212,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (allScreen) allScreen.classList.toggle("screen-hidden", !isAll);
   }
 
+  function updateWatchButtonPassType() {
+    const oneDoubleButton = document.querySelector("#watchButton_one, #watchButton_double");
+    if (oneDoubleButton) {
+      oneDoubleButton.id = mode === "one" ? "watchButton_one" : "watchButton_double";
+      oneDoubleButton.setAttribute("data-pass-type", mode === "one" ? "one" : "double");
+    }
+
+    const allButton = document.querySelector("#watchButton_all");
+    if (allButton) {
+      allButton.setAttribute("data-pass-type", "all");
+    }
+  }
+
   function updateUI() {
     const config = modeConfig[mode];
     const max = config.max;
@@ -226,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const finalPay = applied;
 
     updateScreens();
+    updateWatchButtonPassType();
     updateTabActive();
     renderComboTabs();
 

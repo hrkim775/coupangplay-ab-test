@@ -314,7 +314,7 @@
           </div>
 </div>
 </div>
-<div class="button-cta" id="watchButton">
+<div class="button-cta" id="watchButton_double" data-pass-type="double">
 <div class="text-wrapper-28">
           지금 바로 시청하기
          </div>
@@ -500,7 +500,7 @@
          </div>
 <p class="element-3"><span class="text-wrapper-21">22,400원</span><span class="text-wrapper-23"> / 월 자동결제</span></p>
 </div>
-<div class="button-cta-2" id="watchButton">
+<div class="button-cta-2" id="watchButton_all" data-pass-type="all">
 <div class="text-wrapper-24">
           지금 바로 시청하기
          </div>
@@ -605,7 +605,7 @@
   // pass_combination의 선택/가격 변동 로직은 건드리지 않고, 시청하기 버튼만 연결
   if (CURRENT_SCREEN === "pass_combination") {
     bind(".header-topbar .view, .header-topbar .div-wrapper, .arrow-left, .back-btn", "passhub");
-    bind("#watchButton", "buyresult");
+    bind("#watchButton_one, #watchButton_double, #watchButton_all", "buyresult");
   }
 
   bindText("지금 바로 시청하기", "buyresult");

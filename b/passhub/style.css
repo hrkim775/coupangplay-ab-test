@@ -1,9 +1,15 @@
+body {
+  background-color: #000000;
+}
+
 .passhub {
   background-color: #000000;
-  width: 100%;
+  width: 384px;
   min-width: 384px;
   min-height: 796px;
   position: relative;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .passhub .frame {
